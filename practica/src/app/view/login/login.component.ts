@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
 import { RegisterBean } from 'src/app/model/register-bean';
 import { RegisterService } from 'src/app/services/register.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,9 +15,11 @@ export class LoginComponent implements OnInit {
   pass:string;
 
   loginService : LoginService;
+  router:Router;
 
-  constructor(ls : LoginService) { 
+  constructor(ls : LoginService, r:Router) { 
     this.loginService=ls;
+    this.router= r;
   }
 
   ngOnInit(): void {
@@ -33,6 +36,13 @@ export class LoginComponent implements OnInit {
 
     this.loginService.login(register);
 
+    this.router.navigateByUrl("/wellcome");
+
+    
+    
   }
+    
+    
+
 
 }
