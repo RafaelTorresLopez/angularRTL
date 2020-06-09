@@ -12,12 +12,10 @@ export class BodyComponent implements OnInit {
 
   constructor(loginService : LoginService) { 
 
-    console.debug("tokenDevuelto:"  + loginService.login());
+    loginService.login();
   }
-  
-  ngOnInit(): void {
 
-    
+  ngOnInit(): void {
 
   }
 
