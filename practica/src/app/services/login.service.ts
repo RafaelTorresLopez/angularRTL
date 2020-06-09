@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Token } from '../model/token';
+import { RegisterBean } from '../model/register-bean';
 
 
 @Injectable({
@@ -12,7 +13,7 @@ export class LoginService {
 
   }
 
-  public login() {
+  public login(register:RegisterBean) {
 
     let result:string;
 
@@ -20,7 +21,8 @@ export class LoginService {
 
     let body:string = "{\"email\": \"eve.holt@reqres.in\", \"password\": \"cityslicka\" }";
 
-    this.http.post('https://reqres.in/api/login', JSON.parse(body)).subscribe(data => {
+    this.http.post('https://reqres.in/api/login', register).subscribe(data => {
+    //this.http.post('https://reqres.in/api/login', JSON.parse(body)).subscribe(data => {
       let response:string;
       let myToken:Token;
       response = JSON.stringify(data);

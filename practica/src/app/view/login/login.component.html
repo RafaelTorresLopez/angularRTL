@@ -1,1 +1,7 @@
-<p>login works!</p>
+<label for="inputMail">mail</label>
+<input type="text" id="inputMail" name="inputMailName"  placeholder="mail" [(ngModel)]="mail"  value="eve.holt@reqres.in">
+<label for="inputPass">Password</label>
+<input type="password" id="inputPass" name="inputPassName" placeholder="Pasword" [(ngModel)]="pass" value="cityslicka">
+
+<button type="button" id="boton" (click)="login()">Submit</button>
+
