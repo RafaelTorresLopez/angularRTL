@@ -37,9 +37,6 @@ export class LoginComponent implements OnInit {
     this.loginService.login(register);
 
     this.router.navigateByUrl("/wellcome");
-
-    
-    
   }
     
     

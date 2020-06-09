@@ -4,6 +4,7 @@ import { LoginComponent } from './view/login/login.component';
 import { UserDetailComponent } from './view/user-detail/user-detail.component';
 import { ListUserComponent } from './view/list-user/list-user.component';
 import { WellcomeComponent } from './view/wellcome/wellcome.component';
+import { ListResourceComponent } from './view/list-resource/list-resource.component';
 
 
 
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'listUsers', component: ListUserComponent},
   { path: 'userDetail', component: UserDetailComponent},
+  { path: 'listResources', component: ListResourceComponent},
   { path: 'wellcome', component: WellcomeComponent}
 ];
 

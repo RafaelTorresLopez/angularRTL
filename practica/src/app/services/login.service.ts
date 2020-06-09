@@ -19,7 +19,7 @@ export class LoginService {
 
     console.log ("Llamando al servicio de login en regres.in...")
 
-    let body:string = "{\"email\": \"eve.holt@reqres.in\", \"password\": \"cityslicka\" }";
+    // let body:string = "{\"email\": \"eve.holt@reqres.in\", \"password\": \"cityslicka\" }";
 
     this.http.post('https://reqres.in/api/login', register).subscribe(data => {
     //this.http.post('https://reqres.in/api/login', JSON.parse(body)).subscribe(data => {

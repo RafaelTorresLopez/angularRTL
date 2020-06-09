@@ -11,12 +11,13 @@ import { WellcomeComponent } from './view/wellcome/wellcome.component';
 import { ListUserComponent } from './view/list-user/list-user.component';
 import { UserDetailComponent } from './view/user-detail/user-detail.component';
 
-// Para usar servicios Web incluimos estas directivas
+// Para usar formularios incluimos estas directivas
 import { FormsModule} from '@angular/forms';
 // Fin de imports para uso de formularios
 
 // Para usar servicios Web incluimos estas directivas
 import { HttpClientModule} from  '@angular/common/http';
+import { ListResourceComponent } from './view/list-resource/list-resource.component';
 // Fin de imports para uso de servicios Web
 
 
@@ -31,7 +32,8 @@ import { HttpClientModule} from  '@angular/common/http';
     LoginComponent,
     WellcomeComponent,
     ListUserComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    ListResourceComponent
   ],
   imports: [
     BrowserModule,
