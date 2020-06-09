@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../services/login.service';
 
 @Component({
   selector: 'app-body',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BodyComponent implements OnInit {
 
-  constructor() { }
+   
+
+  constructor(loginService : LoginService) { 
+    loginService.login();
+  }
 
   ngOnInit(): void {
+
+    
+
   }
 
 }
