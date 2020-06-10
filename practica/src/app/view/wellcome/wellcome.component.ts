@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class WellcomeComponent implements OnInit {
 
-  constructor(private listUsersService : ListUsersService,  private router:Router) { 
+  constructor(  private router:Router) { 
 
   }
 
@@ -17,7 +17,7 @@ export class WellcomeComponent implements OnInit {
   }
   
   listUsers() {
-    this.listUsersService.listUsers();
+    
 
     this.router.navigateByUrl("/listUsers");
 

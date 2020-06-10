@@ -1,1 +1,32 @@
-<p>list-user works!</p>
+
+
+<table>
+    <tr>
+        <td>id</td>
+        <td>email</td>
+        <td>first_name</td>
+        <td>last_name</td>
+        <td>avatar</td>
+        <td>detail</td>
+        <td>delete</td>
+        <td>update</td>
+    </tr>
+
+
+    <tr *ngFor="let item of listUsers.data">
+        <td>{{item.id}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.first_name}}</td>
+        <td>{{item.last_name}}</td>
+        <td><img src={{item.avatar}} width="70" height="70"></td>
+        
+
+        <td><button type="button" id="Detail" (click)="detail(item.id)">Detail</button></td>
+        <td><button type="button" id="Delete" (click)="delete(item.id)">Delete</button></td>
+        <td><button type="button" id="Update" (click)="update(item.id)">Update</button></td>
+    </tr>
+</table>
+ 
+
+
+<button type="button" id="volver" (click)="volver()">Volver</button>

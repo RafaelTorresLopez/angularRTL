@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-resource',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListResourceComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { 
+
+  }
+
+
+  volver() {
+    this.router.navigateByUrl("/wellcome");
+  }
 
   ngOnInit(): void {
   }

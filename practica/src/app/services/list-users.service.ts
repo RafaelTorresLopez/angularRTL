@@ -16,25 +16,13 @@ export class ListUsersService {
 
   public listUsers() {
 
-    let result:string;
+    let page:number;
+
+    page=1;
 
     console.log ("Llamando al servicio de users en regres.in...")
 
-    this.http.get('https://reqres.in/api/users?page=1').subscribe(data => {
-      console.log(data);      
-
-      let response:string;
-      let listUser:ListUserBean;
-
-      response = JSON.stringify(data);
-      console.log("-------POST-------->" + response);
-      
-      listUser=JSON.parse(response);
-      console.log("-------listUser-------->" + listUser.total);
-
-      localStorage.setItem("listUser", JSON.stringify(listUser));
-
-    })
+    return this.http.get('https://reqres.in/api/users?page=' + page);
   }
 
 
