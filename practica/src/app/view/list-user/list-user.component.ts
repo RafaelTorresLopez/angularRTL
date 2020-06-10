@@ -56,7 +56,9 @@ export class ListUserComponent implements OnInit {
   public delete(i:number)
   {
 
-    this.userDeleteService.delete(i);
+    this.userDeleteService.delete(i).subscribe(data => { 
+      console.log(data.status);
+    });
 
     console.log("Eliminación del id: " + i);
   }

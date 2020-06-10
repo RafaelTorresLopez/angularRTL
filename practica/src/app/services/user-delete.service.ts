@@ -16,9 +16,19 @@ export class UserDeleteService {
 
     console.log ("Llamando al servicio de login en regres.in...")
 
-    this.http.delete('https://reqres.in/api/users/'+id).subscribe(data => {
-      console.log("-------POST-------->" + data);      
-    });  
+    // De esta forma se devuelve el response
+    return this.http.delete<void>('https://reqres.in/api/users/'+id, {observe : 'response'});
 
+//    this.http.delete('https://reqres.in/api/users/'+id).subscribe(data => {
+//      console.log("-------POST-------->" + data);         
+//    });  
   }
+
+
+  
+    
+  
+
+
+
 }
