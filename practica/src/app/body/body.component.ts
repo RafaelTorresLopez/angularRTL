@@ -13,12 +13,14 @@ export class BodyComponent implements OnInit {
 
   constructor(loginService : LoginService) { 
 
+    /*
       let register:RegisterBean;
       register = new RegisterBean();
       register.email="eve.holt@reqres.in";
       register.password="cityslicka";
 
     loginService.login(register);
+    */
   }
 
   ngOnInit(): void {

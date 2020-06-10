@@ -1,3 +1,26 @@
 
+
+
+<table>
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>year</td>
+        <td>color</td>
+        <td>pantone_value</td>
+    </tr>
+
+
+    <tr *ngFor="let item of listResources.data">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.year}}</td>
+        <td>{{item.color}}</td>
+        <td>{{item.pantone_value}}</td>
+
+    </tr>
+</table>
+ 
+
 <button type="button" id="volver" (click)="volver()">Volver</button>
 
