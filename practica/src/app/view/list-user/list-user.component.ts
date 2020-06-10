@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ListUsersService } from 'src/app/services/list-users.service';
 import { ListUserBean } from 'src/app/model/list-user-bean';
 import { UserBean } from 'src/app/model/user-bean';
+import { UserDeleteService } from 'src/app/services/user-delete.service';
 
 @Component({
   selector: 'app-list-user',
@@ -13,7 +14,9 @@ export class ListUserComponent implements OnInit {
 
   public listUsers: ListUserBean;
 
-  constructor(private listUsersService : ListUsersService,private router:Router) { 
+  constructor(private listUsersService : ListUsersService, 
+    private userDeleteService: UserDeleteService,
+    private router:Router) { 
 
   }
 
@@ -52,6 +55,9 @@ export class ListUserComponent implements OnInit {
 
   public delete(i:number)
   {
+
+    this.userDeleteService.delete(i);
+
     console.log("Eliminación del id: " + i);
   }
   
