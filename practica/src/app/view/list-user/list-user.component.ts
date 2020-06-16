@@ -35,7 +35,7 @@ export class ListUserComponent implements OnInit {
       //let listUser:ListUserBean;
 
       response = JSON.stringify(data);
-      console.log("-------POST-------->" + response);
+      console.log("-------POST---------->" + response);
       
       this.listUsers=JSON.parse(response);
       console.log("-------listUser-------->" + this.listUsers.total);
